@@ -12,52 +12,8 @@ import { query, ref, set, onValue, orderByKey, push, limitToFirst, remove } from
 
 
 function Form() {
-
-
-    //const users = query(ref(db, 'users/'), orderByKey(), limitToFirst(1));
-
-
-
-    //var ref = db.ref("/");
-    //var rootRef = db.ref();
-    //var playersRef = db.ref("/users/");
-    /*
-    playersRef.orderByKey().on("child_added", function(data) {
-        console.log(data.key);
-    });
-    */
-
-    //const ham = db.child("users").orderByKey().limitToLast(10);
-
-    //, orderByKey()
-
-    
-
-
-    /*
-    
-    onValue(users, (snapshot) => {
-        const data = snapshot.val();
-        //updateStarCount(postElement, data);
-        console.log(data);
-    });
-    */
-
-
-
     
     let navigate = useNavigate();
-
-    //const list = new Queue();
-    /*
-    
-    const {state} = useLocation();
-    const {queue} = state;
-
-    var list = new Queue(queue);
-    */
-
-    
 
     var values = {userName: "", utEID: ""};
 
@@ -71,21 +27,6 @@ function Form() {
     const handleQueue = (e) => {
         e.preventDefault();
 
-        // add to queue
-    
-        //list.enqueue(formValues);
-
-        //console.log(list);
-
-        // send list to results page
-        
-        /*
-            db.ref('/').push({ 
-              name: 'sai',
-              age: 19,
-             });
-             */
-
             // adds data to database 
              const postListRef = ref(db, 'users/');
              const newPostRef = push(postListRef);
@@ -93,18 +34,7 @@ function Form() {
                 name: formValues.userName,
                 id: formValues.utEID 
              });
-             /*
-             set(ref(db, 'users/' + formValues.userName), {
-                 name: formValues.userName,
-                 id: formValues.utEID 
-            });
-            */
-
-
-        //navigate('/results');
-        navigate('/results');
-        //, { state: {queue: list}}
-         
+        navigate('/results');    
     }
     
 
