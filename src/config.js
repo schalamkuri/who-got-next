@@ -16,17 +16,15 @@
 
 import { initializeApp } from "firebase/app";
 import { getDatabase, query, ref, set, onValue, push, orderByKey } from "firebase/database";
-//import {ref} from "firebase/firestore"
-//import * as firebase from "firebase/app";
 const firebaseConfig = {
-    apiKey: "AIzaSyAElBre4qKa90vmNxdFLDkdLqJuv7pfnrw",
-    authDomain: "who-got-next-9eb2f.firebaseapp.com",
-    databaseURL: "https://who-got-next-9eb2f-default-rtdb.firebaseio.com",
-    projectId: "who-got-next-9eb2f",
-    storageBucket: "who-got-next-9eb2f.appspot.com",
-    messagingSenderId: "806281031505",
-    appId: "1:806281031505:web:028c9a435cf9b6c92a2d70",
-    measurementId: "G-2C2DBM3GZ6"
+    apiKey: "YOUR-API-KEY",
+    authDomain: "YOUR-DOMAIN",
+    databaseURL: "YOUR-URL",
+    projectId: "YOUR-ID",
+    storageBucket: "YOUR-STORAGE-BUCKET",
+    messagingSenderId: "YOUR-SENDER-ID",
+    appId: "YOUR-APP-ID",
+    measurementId: "YOUR-MEASUREMENT-ID"
   };
 
   
